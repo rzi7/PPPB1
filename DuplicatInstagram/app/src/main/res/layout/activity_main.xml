@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/navbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".08"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sotries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".23"/>
+
+
+<!--  Navbar title  -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/instagram_logo"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navbar_title"/>
+
+    <ImageView
+        android:id="@+id/share_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@id/navbar_title"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/share"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/heart"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toStartOf="@id/share_icon"
+        app:layout_constraintTop_toTopOf="@id/share_icon"/>
+
+<!-- Stories -->
+    <ImageView
+        android:id="@+id/user_story"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sotries"
+        android:src="@drawable/user_story"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Cerita Anda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_story"/>
+
+    <ImageView
+        android:id="@+id/assets_story"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/asset_story"
+        app:layout_constraintStart_toEndOf="@id/user_story"
+        app:layout_constraintTop_toTopOf="@id/user_story"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assets"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@id/user_story"
+        app:layout_constraintTop_toBottomOf="@id/assets_story"/>
+
+    <ImageView
+        android:id="@+id/liga_story"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/liga_story"
+        app:layout_constraintStart_toEndOf="@id/assets_story"
+        app:layout_constraintTop_toTopOf="@id/user_story"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liga"
+        android:layout_marginStart="39dp"
+        app:layout_constraintStart_toEndOf="@id/assets_story"
+        app:layout_constraintTop_toBottomOf="@id/liga_story"/>
+
+    <ImageView
+        android:id="@+id/assets_story2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/asset_story"
+        app:layout_constraintStart_toEndOf="@id/liga_story"
+        app:layout_constraintTop_toTopOf="@id/liga_story"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assets"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@id/liga_story"
+        app:layout_constraintTop_toBottomOf="@id/assets_story2"/>
+
+    <ImageView
+        android:id="@+id/pp_fufufafa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/fufufafa_pp"
+        app:layout_constraintTop_toBottomOf="@id/sotries"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/username_fufufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fufufafa"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintTop_toBottomOf="@id/sotries"
+        app:layout_constraintStart_toEndOf="@id/pp_fufufafa"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="putra Mulyono"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/username_fufufafa"
+        app:layout_constraintStart_toEndOf="@id/pp_fufufafa"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/titik"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/sotries"/>
+
+    <ImageView
+        android:id="@+id/post_fufufafa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fufufafa"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/pp_fufufafa"/>
+
+    <ImageView
+        android:id="@+id/like_fufufafa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/heart"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/post_fufufafa"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"/>
+
+    <ImageView
+        android:id="@+id/comment_fufufafa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/comment"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/post_fufufafa"
+        app:layout_constraintStart_toEndOf="@id/like_fufufafa"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/share"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/comment_fufufafa"
+        app:layout_constraintTop_toBottomOf="@id/post_fufufafa"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintTop_toBottomOf="@id/post_fufufafa"/>
+
+    <TextView
+        android:id="@+id/keterangan_fufufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disukai oleh Ikhwan_Hanif"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/like_fufufafa"/>
+
+    <TextView
+        android:id="@+id/capt_fufufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fufufafa #Proud"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keterangan_fufufafa"
+        />
+
+    <TextView
+        android:id="@+id/hide_comment_fufufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:hint="tampilkan 10 komentar lainnya"
+        app:layout_constraintTop_toBottomOf="@id/capt_fufufafa"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        layout="@layout/navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
